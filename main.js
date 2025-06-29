@@ -1,28 +1,28 @@
-//                  elementos html
+//                  declaracion de elementos html
 
 // campo que el usuario completara. input
-const $inputUserA = document.querySelector("#input-user-a")
+const $inputUserA = document.getElementById("#input-user-a")
 
 // campo que el usuario completara. input
-const $inputUserB = document.querySelector("#input-user-b")
+const $inputUserB = document.getElementById("#input-user-b")
 
 // campo donde se imprimira el resultado. p
-const $result = document.querySelector("#result")
+const $result = document.getElementById("#result")
 
-//
-const $buttonAdd = document.querySelector("#plus-add")
+// boton sumar
+const $buttonAdd = document.getElementById("#plus-add")
 
-//
-const $buttonTake = document.querySelector("#minus-take")
+// boton sumar
+const $buttonTake = document.getElementById("#minus-take")
 
-//
-const $buttonMultiply = document.querySelector("#multiply-times")
+// boton multiplicar
+const $buttonMultiply = document.getElementById("#multiply-times")
 
-//
-const $buttonDivide = document.querySelector("#divide")
+// boton dividir
+const $buttonDivide = document.getElementById("#divide")
 
-//
-const $buttonClear = document.querySelector("#clear")
+// boton limpiar
+const $buttonClear = document.getElementById("#clear")
 
 
 //              funciones
