@@ -1,7 +1,13 @@
 //                  elementos html
 
 // campo que el usuario completara
-const $inputUser = document.querySelector("#input-user")
+const $inputUserA = document.querySelector("#input-user-a")
+
+// campo que el usuario completara
+const $inputUserB = document.querySelector("#input-user-b")
+
+// campo que el usuario completara
+const $result = document.querySelector("#result")
 
 //
 const $buttonAdd = document.querySelector("#plus-add")
@@ -18,9 +24,12 @@ const $buttonDivide = document.querySelector("#divide")
 //
 const $buttonEquals = document.querySelector("#equals")
 
-function add(a, b) {
+function add() {
+    const a = parseInt($inputUserA.value)
+    const b = parseInt($inputUserB.value)
     const resultAdd = a + b
-    return resultAdd
+    console.log(resultAdd)
+    $result.textContent = resultAdd
 }
 
 function take(a, b) {
@@ -37,3 +46,8 @@ function divide(a, b) {
     const resultDivide = a / b
     return resultDivide
 }
+
+
+
+//          botones
+$buttonAdd.addEventListener("click", add)
