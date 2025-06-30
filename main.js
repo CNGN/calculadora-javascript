@@ -39,8 +39,8 @@ function clear() {
 
 // funcion para sumar valores
 function add() {
-    const aAdd = parseInt($inputUserA.value)
-    const bAdd = parseInt($inputUserB.value)
+    const aAdd = Number($inputUserA.value)
+    const bAdd = Number($inputUserB.value)
     const resultAdd = aAdd + bAdd
     console.log(resultAdd)
     $result.textContent = resultAdd
@@ -48,8 +48,8 @@ function add() {
 
 // funcion para restar valores
 function take() {
-    const aTake = parseInt($inputUserA.value)
-    const bTake = parseInt($inputUserB.value)
+    const aTake = Number($inputUserA.value)
+    const bTake = Number($inputUserB.value)
     const resultTake = aTake - bTake
     console.log(resultTake)
     $result.textContent = resultTake
@@ -57,8 +57,8 @@ function take() {
 
 // funcion para multiplicar valores
 function multiply() {
-    const aMultiply = parseInt($inputUserA.value)
-    const bMultiply = parseInt($inputUserB.value)
+    const aMultiply = Number($inputUserA.value)
+    const bMultiply = Number($inputUserB.value)
     const resultMultiply = aMultiply * bMultiply
     console.log(resultMultiply)
     $result.textContent = resultMultiply
@@ -66,8 +66,8 @@ function multiply() {
 
 // funcion para dividir valores
 function divide() {
-    const aDivide = parseInt($inputUserA.value)
-    const bDivide = parseInt($inputUserB.value)
+    const aDivide = Number($inputUserA.value)
+    const bDivide = Number($inputUserB.value)
     const resultDivide = aDivide / bDivide
     console.log(resultDivide)
     $result.textContent = resultDivide
