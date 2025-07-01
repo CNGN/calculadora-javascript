@@ -1,3 +1,24 @@
+/*
+            COSAS QUE FALTAN
+
+1 - VALIDAR CAMPOS CON EXPRESIONES REGULARES. PARA PERMITIR SOLO NUMERO DESDE JAVASCRIPT
+
+2 - ESTABLECER EL FORMATO DE NUMERO A AGREGAR EN LOS INPUT.
+    ME REFIERO A LA COMA Y PUNTO.
+    PARA QUE SEA MAS VISIBLE CIENTOS CON CENTAVOS, MILES CON CENTAVOS, ETC.
+
+3 - ARREGLAR EL RESULTADO DE 0 DIVIDIDO 1
+    ACTUALMENTE, DA COMO RESULTADO Infinity
+
+
+*/
+
+
+
+
+
+
+
 //                  declaracion de elementos html
 
 // campo que el usuario completara. input
@@ -38,7 +59,7 @@ function clear() {
 }
 
 // en esta funcion se debe poner un expresión regular para validar si
-// hay numeros en los input
+// hay numeros en los input. cuando la aprenda la pondre. Mejora a futuro.
 
 // funcion para validar campos
 function validateFields() {
@@ -58,12 +79,20 @@ function validateFields() {
 function add() {
     const validateAdd = validateFields()
     if (validateAdd === 0) {
+        // se frena el codigo.
         return
     } else if (validateAdd === 1) {
+        // tomo el valor del elemento html con value (el numero que pone el usuario),
+        // a ese valor lo convierto a Number,
+        // asigno el valor resultante a una varible.
         const aAdd = Number($inputUserA.value)
         const bAdd = Number($inputUserB.value)
+        // se realiza la suma y se asigna el valor a una varible.
         const resultAdd = aAdd + bAdd
+        // se imprime el resultado por consola
         console.log(resultAdd)
+        // se imprime el resultado en el elemento html p.
+        // para que lo puedad visualizar el usuario.
         $result.textContent = resultAdd
     }
 }
@@ -243,6 +272,25 @@ function add() {
 
 /////////////////////////////////////////////////////////////////////////////
 
+($inputUserA.value === "" && $inputUserB.value === "")
+
+si o si debo colocar .value para acceder al valor del elemento html.
+si no me devuelve todo el elemento html:
+
+<input id="input-user-a" type="number" min="-1.000.000.000.000.000.000,00" max="1.000.000.000.000.000.000,00"
+        step="0.1" placeholder="Ingrese un numero">
+
+///////////////////////////////////////////////////////////////////////////////
+
+
+Number():
+Conversion a número.
+Si la conversión no es posible, devuelve NaN (Not a Number).
+Puede convertir cadenas a números, incluyendo números decimales,
+    o incluso booleanos ( true a 1, false a 0) y null (a 0). 
+Si la cadena contiene caracteres no numéricos, devuelve NaN. 
+
+////////////////////////////////////////////////////////////////////////////
 
 
 */
